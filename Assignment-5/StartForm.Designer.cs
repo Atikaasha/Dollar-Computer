@@ -28,67 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.startlabel = new System.Windows.Forms.Label();
-            this.newOrderButton = new System.Windows.Forms.Button();
-            this.startFormPictureBox = new System.Windows.Forms.PictureBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.startFormPictureBox)).BeginInit();
+            this.StartLabel = new System.Windows.Forms.Label();
+            this.NewOderButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.StartFormPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.StartFormPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // startlabel
+            // StartLabel
             // 
-            this.startlabel.AutoSize = true;
-            this.startlabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.startlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startlabel.Location = new System.Drawing.Point(78, 22);
-            this.startlabel.Name = "startlabel";
-            this.startlabel.Size = new System.Drawing.Size(183, 32);
-            this.startlabel.TabIndex = 0;
-            this.startlabel.Text = "Order Here!!";
-            this.startlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.StartLabel.AutoSize = true;
+            this.StartLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.StartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartLabel.Location = new System.Drawing.Point(78, 22);
+            this.StartLabel.Name = "StartLabel";
+            this.StartLabel.Size = new System.Drawing.Size(183, 32);
+            this.StartLabel.TabIndex = 0;
+            this.StartLabel.Text = "Order Here!!";
+            this.StartLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // newOrderButton
+            // NewOderButton
             // 
-            this.newOrderButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.newOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newOrderButton.Location = new System.Drawing.Point(74, 278);
-            this.newOrderButton.Name = "newOrderButton";
-            this.newOrderButton.Size = new System.Drawing.Size(187, 39);
-            this.newOrderButton.TabIndex = 1;
-            this.newOrderButton.Text = "Start a New Order";
-            this.newOrderButton.UseVisualStyleBackColor = false;
+            this.NewOderButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NewOderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewOderButton.Location = new System.Drawing.Point(74, 278);
+            this.NewOderButton.Name = "NewOderButton";
+            this.NewOderButton.Size = new System.Drawing.Size(187, 39);
+            this.NewOderButton.TabIndex = 1;
+            this.NewOderButton.Text = "Start a New Order";
+            this.NewOderButton.UseVisualStyleBackColor = false;
             // 
-            // startFormPictureBox
+            // SaveButton
             // 
-            this.startFormPictureBox.BackgroundImage = global::Assignment_5.Properties.Resources.startForm;
-            this.startFormPictureBox.Location = new System.Drawing.Point(74, 66);
-            this.startFormPictureBox.Name = "startFormPictureBox";
-            this.startFormPictureBox.Size = new System.Drawing.Size(187, 193);
-            this.startFormPictureBox.TabIndex = 2;
-            this.startFormPictureBox.TabStop = false;
+            this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(74, 335);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(187, 39);
+            this.SaveButton.TabIndex = 3;
+            this.SaveButton.Text = "Open a Saved Order";
+            this.SaveButton.UseVisualStyleBackColor = false;
             // 
-            // saveButton
+            // ExitButton
             // 
-            this.saveButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(74, 335);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(187, 39);
-            this.saveButton.TabIndex = 3;
-            this.saveButton.Text = "Open a Saved Order";
-            this.saveButton.UseVisualStyleBackColor = false;
+            this.ExitButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Location = new System.Drawing.Point(74, 393);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(187, 39);
+            this.ExitButton.TabIndex = 4;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = false;
             // 
-            // exitButton
+            // StartFormPictureBox
             // 
-            this.exitButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(74, 393);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(187, 39);
-            this.exitButton.TabIndex = 4;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = false;
+            this.StartFormPictureBox.BackgroundImage = global::Assignment_5.Properties.Resources.startForm;
+            this.StartFormPictureBox.Location = new System.Drawing.Point(74, 66);
+            this.StartFormPictureBox.Name = "StartFormPictureBox";
+            this.StartFormPictureBox.Size = new System.Drawing.Size(187, 193);
+            this.StartFormPictureBox.TabIndex = 2;
+            this.StartFormPictureBox.TabStop = false;
             // 
             // StartForm
             // 
@@ -97,16 +97,16 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(328, 444);
             this.ControlBox = false;
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.startFormPictureBox);
-            this.Controls.Add(this.newOrderButton);
-            this.Controls.Add(this.startlabel);
+            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.StartFormPictureBox);
+            this.Controls.Add(this.NewOderButton);
+            this.Controls.Add(this.StartLabel);
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dollar Computer welcomes you!";
             this.Load += new System.EventHandler(this.StartForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.startFormPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StartFormPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,10 +114,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label startlabel;
-        private System.Windows.Forms.Button newOrderButton;
-        private System.Windows.Forms.PictureBox startFormPictureBox;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Label StartLabel;
+        private System.Windows.Forms.Button NewOderButton;
+        private System.Windows.Forms.PictureBox StartFormPictureBox;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button ExitButton;
     }
 }

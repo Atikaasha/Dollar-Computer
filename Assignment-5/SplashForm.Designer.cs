@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splashLabel = new System.Windows.Forms.Label();
+            this.SplashLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // splashLabel
+            // SplashLabel
             // 
-            this.splashLabel.AutoSize = true;
-            this.splashLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splashLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splashLabel.Location = new System.Drawing.Point(2, 9);
-            this.splashLabel.Name = "splashLabel";
-            this.splashLabel.Size = new System.Drawing.Size(323, 29);
-            this.splashLabel.TabIndex = 0;
-            this.splashLabel.Text = "Welcome to Dollar Computer";
-            this.splashLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SplashLabel.AutoSize = true;
+            this.SplashLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SplashLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SplashLabel.Location = new System.Drawing.Point(2, 9);
+            this.SplashLabel.Name = "SplashLabel";
+            this.SplashLabel.Size = new System.Drawing.Size(323, 29);
+            this.SplashLabel.TabIndex = 0;
+            this.SplashLabel.Text = "Welcome to Dollar Computer";
+            this.SplashLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // SplashForm
             // 
@@ -49,7 +49,7 @@
             this.BackgroundImage = global::Assignment_5.Properties.Resources.dollar_computer;
             this.ClientSize = new System.Drawing.Size(320, 450);
             this.ControlBox = false;
-            this.Controls.Add(this.splashLabel);
+            this.Controls.Add(this.SplashLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -63,7 +63,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label splashLabel;
+        private System.Windows.Forms.Label SplashLabel;
     }
 }
 
