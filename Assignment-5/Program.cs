@@ -7,8 +7,8 @@ using System.Windows.Forms;
  * Description: COMP123 Assignment - 5(Computer purchase app)
  * Author: Chowdhury Atika Parvin
  * ID# 301007336
- * Version: 1.3 Product Info Form User Interface has been created
- * Last modified: August 1, 2019
+ * Version: 1.4 Order Form  and About Form User Interface has been created
+ * Last modified: August 2, 2019
  */
 
 namespace Assignment_5
@@ -18,12 +18,14 @@ namespace Assignment_5
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static AboutForm aboutForm;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashForm());
+            aboutForm = new AboutForm();
+            Application.Run(new SplashForm());  
         }
     }
 }

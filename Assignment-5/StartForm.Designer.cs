@@ -102,6 +102,7 @@
             this.Controls.Add(this.StartFormPictureBox);
             this.Controls.Add(this.NewOderButton);
             this.Controls.Add(this.StartLabel);
+            this.MaximizeBox = false;
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dollar Computer welcomes you!";

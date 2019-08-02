@@ -111,6 +111,7 @@
             this.Controls.Add(this.SelectFormGridView);
             this.Controls.Add(this.SelectFormLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer !";
