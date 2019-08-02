@@ -6,8 +6,8 @@ using System.Windows.Forms;
 /* Dollar Computer
  * Description: COMP123 Assignment - 5(Computer purchase app)
  * Author: Chowdhury Atika Parvin
- * ID# 30100736
- * Version: 1.0 User Interface creation started
+ * ID# 301007336
+ * Version: 1.1 Splash Form and Start Form user Interfaces created
  * Last modified: August 1, 2019
  */
 
