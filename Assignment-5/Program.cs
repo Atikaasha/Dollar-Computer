@@ -7,7 +7,7 @@ using System.Windows.Forms;
  * Description: COMP123 Assignment - 5(Computer purchase app)
  * Author: Chowdhury Atika Parvin
  * ID# 301007336
- * Version: 1.1 Splash Form and Start Form user Interfaces created
+ * Version: 1.2 Select Form User Interface has been created
  * Last modified: August 1, 2019
  */
 
