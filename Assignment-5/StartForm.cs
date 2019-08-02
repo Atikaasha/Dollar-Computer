@@ -21,5 +21,16 @@ namespace Assignment_5
         {
 
         }
+
+        private void NewOderButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.selectForm.Show();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

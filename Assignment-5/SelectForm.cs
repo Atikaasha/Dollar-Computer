@@ -19,7 +19,13 @@ namespace Assignment_5
 
         private void selectCancelButton_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void SelectNextButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.productInfoForm.Show();
         }
     }
 }

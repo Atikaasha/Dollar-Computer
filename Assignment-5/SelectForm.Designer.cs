@@ -98,6 +98,7 @@
             this.SelectNextButton.TabIndex = 5;
             this.SelectNextButton.Text = "Next";
             this.SelectNextButton.UseVisualStyleBackColor = false;
+            this.SelectNextButton.Click += new System.EventHandler(this.SelectNextButton_Click);
             // 
             // SelectForm
             // 

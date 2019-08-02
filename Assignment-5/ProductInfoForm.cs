@@ -41,5 +41,16 @@ namespace Assignment_5
         {
 
         }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.orderForm.Show();
+        }
+
+        private void CancelProductButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

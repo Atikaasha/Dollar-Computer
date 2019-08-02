@@ -42,5 +42,21 @@ namespace Assignment_5
             Program.aboutForm.ShowDialog();
 
         }
+
+        private void CPUTypeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderFormBackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.productInfoForm.Show();
+        }
+
+        private void OrderFormFinishButon_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -484,6 +484,7 @@
             this.CancelProductButton.TabIndex = 22;
             this.CancelProductButton.Text = "Cancel";
             this.CancelProductButton.UseVisualStyleBackColor = true;
+            this.CancelProductButton.Click += new System.EventHandler(this.CancelProductButton_Click);
             // 
             // NextButton
             // 
@@ -494,6 +495,7 @@
             this.NextButton.TabIndex = 23;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // ProductInfoForm
             // 
