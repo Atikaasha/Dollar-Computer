@@ -1,4 +1,4 @@
-﻿namespace Assignment_5
+﻿namespace Assignment_5.Views
 {
     partial class StartForm
     {
@@ -31,17 +31,16 @@
             this.StartLabel = new System.Windows.Forms.Label();
             this.NewOderButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.StartFormPictureBox = new System.Windows.Forms.PictureBox();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.StartFormPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.StartFormPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // StartLabel
             // 
-            this.StartLabel.AutoSize = true;
             this.StartLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.StartLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartLabel.Location = new System.Drawing.Point(78, 22);
+            this.StartLabel.Location = new System.Drawing.Point(85, 22);
             this.StartLabel.Name = "StartLabel";
             this.StartLabel.Size = new System.Drawing.Size(183, 32);
             this.StartLabel.TabIndex = 0;
@@ -72,15 +71,6 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // StartFormPictureBox
-            // 
-            this.StartFormPictureBox.BackgroundImage = global::Assignment_5.Properties.Resources.startForm;
-            this.StartFormPictureBox.Location = new System.Drawing.Point(74, 66);
-            this.StartFormPictureBox.Name = "StartFormPictureBox";
-            this.StartFormPictureBox.Size = new System.Drawing.Size(187, 193);
-            this.StartFormPictureBox.TabIndex = 2;
-            this.StartFormPictureBox.TabStop = false;
-            // 
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -92,10 +82,18 @@
             this.SaveButton.Text = "Open a Saved Order";
             this.SaveButton.UseVisualStyleBackColor = false;
             // 
+            // StartFormPictureBox
+            // 
+            this.StartFormPictureBox.BackgroundImage = global::Assignment_5.Properties.Resources.startForm;
+            this.StartFormPictureBox.Location = new System.Drawing.Point(74, 66);
+            this.StartFormPictureBox.Name = "StartFormPictureBox";
+            this.StartFormPictureBox.Size = new System.Drawing.Size(187, 193);
+            this.StartFormPictureBox.TabIndex = 2;
+            this.StartFormPictureBox.TabStop = false;
+            // 
             // StartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(328, 444);
             this.ControlBox = false;
@@ -108,10 +106,8 @@
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dollar Computer welcomes you!";
-            this.Load += new System.EventHandler(this.StartForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StartFormPictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

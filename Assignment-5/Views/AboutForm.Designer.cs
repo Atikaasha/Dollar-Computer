@@ -1,4 +1,4 @@
-﻿namespace Assignment_5
+﻿namespace Assignment_5.Views
 {
     partial class AboutForm
     {

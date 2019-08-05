@@ -8,28 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Assignment_5
+namespace Assignment_5.Views
 {
     public partial class OrderForm : Form
     {
         public OrderForm()
         {
             InitializeComponent();
-        }
-
-        private void MemoryLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HDDLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
         /// <summary>
         /// This is the event handler foe about toolStripMenuItem click event
@@ -43,20 +28,15 @@ namespace Assignment_5
 
         }
 
-        private void CPUTypeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void OrderFormBackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             Program.productInfoForm.Show();
         }
 
-        private void OrderFormFinishButon_Click(object sender, EventArgs e)
+        private void OrderFormCancelButton_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
     }
 }

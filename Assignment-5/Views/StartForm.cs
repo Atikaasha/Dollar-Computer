@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Assignment_5
+namespace Assignment_5.Views
 {
     public partial class StartForm : Form
     {
         public StartForm()
         {
             InitializeComponent();
-        }
-
-        private void StartForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void NewOderButton_Click(object sender, EventArgs e)

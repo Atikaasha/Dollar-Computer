@@ -8,38 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Assignment_5
+namespace Assignment_5.Views
 {
     public partial class ProductInfoForm : Form
     {
         public ProductInfoForm()
         {
             InitializeComponent();
-        }
-
-        private void ProductIDTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WebCamTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CostTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -51,6 +26,12 @@ namespace Assignment_5
         private void CancelProductButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void AnotherButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.selectForm.Show();
         }
     }
 }
