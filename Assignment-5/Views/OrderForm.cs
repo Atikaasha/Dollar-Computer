@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,5 +39,11 @@ namespace Assignment_5.Views
         {
             Application.Exit();
         }
+
+        private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderPrintForm.PrintAction = PrintAction.PrintToPreview;
+            OrderPrintForm.Print();
+        } 
     }
 }
