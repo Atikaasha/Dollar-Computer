@@ -62,10 +62,38 @@ namespace Assignment_5.Views
             double cost = Program.productDetails.Cost;
 
                 string outputString = manufacturer +"," + model + "," + " $"     + cost;
-
-
             SelectTextBox.Text = outputString;
-            //Program.productDetails.ProductID = int.parse(cells[0].Value.ToString());
+            Program.productDetails.ProductionId = int.Parse(cells[(int)ProductDetails.ProductField.Product_ID].Value.ToString());
+            Program.productDetails.Cost = double.Parse(cells[(int)ProductDetails.ProductField.Cost].Value.ToString());
+            Program.productDetails.Manufacturer = (cells[(int)ProductDetails.ProductField.Manufacturer].Value.ToString());
+            Program.productDetails.Model = cells[(int)ProductDetails.ProductField.Model].Value.ToString();
+            Program.productDetails.RamType = cells[(int)ProductDetails.ProductField.RAM_Type].Value.ToString();
+            Program.productDetails.RamSize = cells[(int)ProductDetails.ProductField.RAM_Size].Value.ToString();
+            Program.productDetails.DisplayType = cells[(int)ProductDetails.ProductField.Display_Type].Value.ToString();
+            Program.productDetails.LCDSize = cells[(int)ProductDetails.ProductField.LCD_Size].Value.ToString();
+            Program.productDetails.CPUClass = cells[(int)ProductDetails.ProductField.CPU_Class].Value.ToString();
+            Program.productDetails.CPUBrand = cells[(int)ProductDetails.ProductField.CPU_Brand].Value.ToString();
+            Program.productDetails.CPUType = cells[(int)ProductDetails.ProductField.CPU_Type].Value.ToString();
+            Program.productDetails.CPUSpeed = cells[(int)ProductDetails.ProductField.CPU_Speed].Value.ToString();
+            Program.productDetails.CPUNumber = cells[(int)ProductDetails.ProductField.CPU_Number].Value.ToString();
+            Program.productDetails.Condition = cells[(int)ProductDetails.ProductField.Condition].Value.ToString();
+            Program.productDetails.OS = cells[(int)ProductDetails.ProductField.OS].Value.ToString();
+            Program.productDetails.Platform = cells[(int)ProductDetails.ProductField.Platform].Value.ToString();
+            Program.productDetails.HDDSize = cells[(int)ProductDetails.ProductField.HDD_Size].Value.ToString();
+            Program.productDetails.HDDSpeed = cells[(int)ProductDetails.ProductField.HDD_Speed].Value.ToString();
+            Program.productDetails.GPUType = cells[(int)ProductDetails.ProductField.GPU_Type].Value.ToString();
+            Program.productDetails.OpticalDrive = cells[(int)ProductDetails.ProductField.Optical_drive].Value.ToString();
+            Program.productDetails.AudioType = cells[(int)ProductDetails.ProductField.Audio_Type].Value.ToString();
+            Program.productDetails.LAN = cells[(int)ProductDetails.ProductField.LAN].Value.ToString();
+            Program.productDetails.WIFI = cells[(int)ProductDetails.ProductField.WIFI].Value.ToString();
+            Program.productDetails.Width = cells[(int)ProductDetails.ProductField.Width].Value.ToString();
+            Program.productDetails.Height = cells[(int)ProductDetails.ProductField.Height].Value.ToString();
+            Program.productDetails.Depth = cells[(int)ProductDetails.ProductField.Depth].Value.ToString();
+            Program.productDetails.Weight = cells[(int)ProductDetails.ProductField.Weight].Value.ToString();
+            Program.productDetails.MouseType = cells[(int)ProductDetails.ProductField.Mouse_Type].Value.ToString();
+            Program.productDetails.Power = cells[(int)ProductDetails.ProductField.Power].Value.ToString();
+            Program.productDetails.WebCam = cells[(int)ProductDetails.ProductField.Web_Cam].Value.ToString();
+
         }
     }
 }
