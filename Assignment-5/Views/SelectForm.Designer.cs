@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.SelectFormLabel = new System.Windows.Forms.Label();
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SelectionLabel = new System.Windows.Forms.Label();
             this.SelectTextBox = new System.Windows.Forms.TextBox();
             this.SelectCancelButton = new System.Windows.Forms.Button();
@@ -67,6 +66,7 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -125,16 +125,14 @@
             this.webcamDataGridViewTextBoxColumn});
             this.ProductDataGridView.DataSource = this.productBindingSource;
             this.ProductDataGridView.Location = new System.Drawing.Point(12, 41);
+            this.ProductDataGridView.MultiSelect = false;
             this.ProductDataGridView.Name = "ProductDataGridView";
             this.ProductDataGridView.ReadOnly = true;
             this.ProductDataGridView.RowTemplate.Height = 28;
             this.ProductDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProductDataGridView.Size = new System.Drawing.Size(931, 234);
             this.ProductDataGridView.TabIndex = 1;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(Assignment_5.Models.Product);
+            this.ProductDataGridView.SelectionChanged += new System.EventHandler(this.ProductDataGridView_SelectionChanged);
             // 
             // SelectionLabel
             // 
@@ -457,6 +455,10 @@
             this.webcamDataGridViewTextBoxColumn.ReadOnly = true;
             this.webcamDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.webcamDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(Assignment_5.Models.Product);
             // 
             // SelectForm
             // 

@@ -36,7 +36,36 @@ namespace Assignment_5.Views
             {
                 db.products.Load();
                 productBindingSource.DataSource = db.products.Local.ToBindingList();
+                SelectNextButton.Enabled = false;
             }
+        }
+
+        private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            SelectNextButton.Enabled = true;
+            //local scope aliases
+            var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
+            var rows = ProductDataGridView.Rows;
+            var columnCount = ProductDataGridView.ColumnCount;
+            var cells = rows[rowIndex].Cells;
+
+            //rows[rowIndex].Selected = true;
+
+
+            Program.productDetails.Cost = double.Parse(cells[(int)ProductDetails.ProductField.Cost].Value.ToString());
+            Program.productDetails.Manufacturer = (cells[(int)ProductDetails.ProductField.Manufacturer].Value.ToString());
+            Program.productDetails.Model = cells[(int)ProductDetails.ProductField.Model].Value.ToString();
+
+            //string outputString = string.Empty;
+            string manufacturer = Program.productDetails.Manufacturer;
+            string model = Program.productDetails.Model;
+            double cost = Program.productDetails.Cost;
+
+                string outputString = manufacturer +"," + model + "," + " $"     + cost;
+
+
+            SelectTextBox.Text = outputString;
+            //Program.productDetails.ProductID = int.parse(cells[0].Value.ToString());
         }
     }
 }

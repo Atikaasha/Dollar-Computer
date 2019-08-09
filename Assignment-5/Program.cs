@@ -9,13 +9,13 @@ using System.Windows.Forms;
  * Description: COMP123 Assignment - 5(Computer purchase app)
  * Author: Chowdhury Atika Parvin
  * ID# 301007336
- * Version: 1.6 Nevigability among forms have been created
- * Last modified: August 5, 2019
+ * Version: 1.7 In the mean time entity frame work has been done and some textbox functionalities created
+ * Last modified: August 8, 2019
  */
 
 namespace Assignment_5
 {
-    static class Program
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -27,6 +27,7 @@ namespace Assignment_5
         public static ProductInfoForm productInfoForm;
         public static OrderForm orderForm;
         public static AboutForm aboutForm;
+        public static ProductDetails productDetails;
 
         public static Product product;
         [STAThread]
@@ -40,8 +41,8 @@ namespace Assignment_5
             productInfoForm = new ProductInfoForm();
             orderForm = new OrderForm();
             aboutForm = new AboutForm();
-
             product = new Product();
+            productDetails = new ProductDetails();
             Application.Run(new SplashForm());  
         }
     }
