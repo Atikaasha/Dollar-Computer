@@ -47,7 +47,7 @@
             this.ModelLabel = new System.Windows.Forms.Label();
             this.ManufacturerTextBox = new System.Windows.Forms.TextBox();
             this.ManufacturerLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.OSTextBox = new System.Windows.Forms.TextBox();
             this.OSLabel = new System.Windows.Forms.Label();
             this.PlatformTextBox = new System.Windows.Forms.TextBox();
             this.PlatformLabel = new System.Windows.Forms.Label();
@@ -78,6 +78,8 @@
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.ProductInfoOpenFileDialogue = new System.Windows.Forms.OpenFileDialog();
+            this.ProductInfoSaveFileDialogue = new System.Windows.Forms.SaveFileDialog();
             this.ProductMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecGroupBox.SuspendLayout();
@@ -113,6 +115,7 @@
             this.OpenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.OpenToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.OpenToolStripMenuItem.Text = "&Open";
+            this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripButton_Click);
             // 
             // SaveToolStripMenuItem
             // 
@@ -156,6 +159,7 @@
             // 
             // ProductIDTextBox
             // 
+            this.ProductIDTextBox.Enabled = false;
             this.ProductIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductIDTextBox.Location = new System.Drawing.Point(164, 57);
             this.ProductIDTextBox.Name = "ProductIDTextBox";
@@ -175,6 +179,7 @@
             // 
             // ConditionTexBox
             // 
+            this.ConditionTexBox.Enabled = false;
             this.ConditionTexBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditionTexBox.Location = new System.Drawing.Point(412, 62);
             this.ConditionTexBox.Name = "ConditionTexBox";
@@ -194,6 +199,7 @@
             // 
             // CostTextBox
             // 
+            this.CostTextBox.Enabled = false;
             this.CostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CostTextBox.Location = new System.Drawing.Point(670, 65);
             this.CostTextBox.Name = "CostTextBox";
@@ -208,10 +214,11 @@
             this.ProductInfoGroupBox.Controls.Add(this.ModelLabel);
             this.ProductInfoGroupBox.Controls.Add(this.ManufacturerTextBox);
             this.ProductInfoGroupBox.Controls.Add(this.ManufacturerLabel);
-            this.ProductInfoGroupBox.Controls.Add(this.textBox1);
+            this.ProductInfoGroupBox.Controls.Add(this.OSTextBox);
             this.ProductInfoGroupBox.Controls.Add(this.OSLabel);
             this.ProductInfoGroupBox.Controls.Add(this.PlatformTextBox);
             this.ProductInfoGroupBox.Controls.Add(this.PlatformLabel);
+            this.ProductInfoGroupBox.Enabled = false;
             this.ProductInfoGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductInfoGroupBox.Location = new System.Drawing.Point(12, 100);
             this.ProductInfoGroupBox.Name = "ProductInfoGroupBox";
@@ -258,14 +265,14 @@
             this.ManufacturerLabel.TabIndex = 11;
             this.ManufacturerLabel.Text = "Manufacturer:";
             // 
-            // textBox1
+            // OSTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(400, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(413, 30);
-            this.textBox1.TabIndex = 10;
+            this.OSTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OSTextBox.Location = new System.Drawing.Point(400, 21);
+            this.OSTextBox.Name = "OSTextBox";
+            this.OSTextBox.ReadOnly = true;
+            this.OSTextBox.Size = new System.Drawing.Size(413, 30);
+            this.OSTextBox.TabIndex = 10;
             // 
             // OSLabel
             // 
@@ -317,6 +324,7 @@
             this.TechSpecGroupBox.Controls.Add(this.HDDLabel);
             this.TechSpecGroupBox.Controls.Add(this.MemoryTextBox);
             this.TechSpecGroupBox.Controls.Add(this.MemoryLabel);
+            this.TechSpecGroupBox.Enabled = false;
             this.TechSpecGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TechSpecGroupBox.Location = new System.Drawing.Point(12, 239);
             this.TechSpecGroupBox.Name = "TechSpecGroupBox";
@@ -560,6 +568,7 @@
             this.openToolStripButton.Name = "openToolStripButton";
             this.openToolStripButton.Size = new System.Drawing.Size(28, 28);
             this.openToolStripButton.Text = "&Open";
+            this.openToolStripButton.Click += new System.EventHandler(this.OpenToolStripButton_Click);
             // 
             // saveToolStripButton
             // 
@@ -575,6 +584,10 @@
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(6, 31);
+            // 
+            // ProductInfoOpenFileDialogue
+            // 
+            this.ProductInfoOpenFileDialogue.FileName = "openFileDialog1";
             // 
             // ProductInfoForm
             // 
@@ -598,6 +611,7 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Information Form";
+            this.Activated += new System.EventHandler(this.ProductInfoForm_Activated);
             this.ProductMenuStrip.ResumeLayout(false);
             this.ProductMenuStrip.PerformLayout();
             this.ProductInfoGroupBox.ResumeLayout(false);
@@ -627,7 +641,7 @@
         private System.Windows.Forms.Label ModelLabel;
         private System.Windows.Forms.TextBox ManufacturerTextBox;
         private System.Windows.Forms.Label ManufacturerLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox OSTextBox;
         private System.Windows.Forms.Label OSLabel;
         private System.Windows.Forms.TextBox PlatformTextBox;
         private System.Windows.Forms.Label PlatformLabel;
@@ -662,5 +676,7 @@
         private System.Windows.Forms.ToolStripButton openToolStripButton;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.OpenFileDialog ProductInfoOpenFileDialogue;
+        private System.Windows.Forms.SaveFileDialog ProductInfoSaveFileDialogue;
     }
 }

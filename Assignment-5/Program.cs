@@ -9,8 +9,8 @@ using System.Windows.Forms;
  * Description: COMP123 Assignment - 5(Computer purchase app)
  * Author: Chowdhury Atika Parvin
  * ID# 301007336
- * Version: 1.7 In the mean time entity frame work has been done and some textbox functionalities created
- * Last modified: August 8, 2019
+ * Version: 1.8 added OpenFileDialog and saveFileDialog support
+ * Last modified: August 11, 2019
  */
 
 namespace Assignment_5
