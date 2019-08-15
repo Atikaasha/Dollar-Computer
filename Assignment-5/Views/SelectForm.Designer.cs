@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.SelectFormLabel = new System.Windows.Forms.Label();
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
-            this.SelectionLabel = new System.Windows.Forms.Label();
-            this.SelectTextBox = new System.Windows.Forms.TextBox();
-            this.SelectCancelButton = new System.Windows.Forms.Button();
-            this.SelectNextButton = new System.Windows.Forms.Button();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +63,10 @@
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SelectionLabel = new System.Windows.Forms.Label();
+            this.SelectTextBox = new System.Windows.Forms.TextBox();
+            this.SelectCancelButton = new System.Windows.Forms.Button();
+            this.SelectNextButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -130,52 +130,9 @@
             this.ProductDataGridView.ReadOnly = true;
             this.ProductDataGridView.RowTemplate.Height = 28;
             this.ProductDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProductDataGridView.Size = new System.Drawing.Size(931, 234);
+            this.ProductDataGridView.Size = new System.Drawing.Size(931, 328);
             this.ProductDataGridView.TabIndex = 1;
             this.ProductDataGridView.SelectionChanged += new System.EventHandler(this.ProductDataGridView_SelectionChanged);
-            // 
-            // SelectionLabel
-            // 
-            this.SelectionLabel.AutoSize = true;
-            this.SelectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectionLabel.Location = new System.Drawing.Point(-3, 415);
-            this.SelectionLabel.Name = "SelectionLabel";
-            this.SelectionLabel.Size = new System.Drawing.Size(206, 29);
-            this.SelectionLabel.TabIndex = 2;
-            this.SelectionLabel.Text = "Your Selection : ";
-            // 
-            // SelectTextBox
-            // 
-            this.SelectTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectTextBox.Location = new System.Drawing.Point(209, 409);
-            this.SelectTextBox.Name = "SelectTextBox";
-            this.SelectTextBox.ReadOnly = true;
-            this.SelectTextBox.Size = new System.Drawing.Size(456, 35);
-            this.SelectTextBox.TabIndex = 3;
-            // 
-            // SelectCancelButton
-            // 
-            this.SelectCancelButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SelectCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectCancelButton.Location = new System.Drawing.Point(677, 409);
-            this.SelectCancelButton.Name = "SelectCancelButton";
-            this.SelectCancelButton.Size = new System.Drawing.Size(101, 40);
-            this.SelectCancelButton.TabIndex = 4;
-            this.SelectCancelButton.Text = "Cancel";
-            this.SelectCancelButton.UseVisualStyleBackColor = false;
-            this.SelectCancelButton.Click += new System.EventHandler(this.selectCancelButton_Click);
-            // 
-            // SelectNextButton
-            // 
-            this.SelectNextButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SelectNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectNextButton.Location = new System.Drawing.Point(811, 409);
-            this.SelectNextButton.Name = "SelectNextButton";
-            this.SelectNextButton.Size = new System.Drawing.Size(101, 40);
-            this.SelectNextButton.TabIndex = 5;
-            this.SelectNextButton.Text = "Next";
-            this.SelectNextButton.UseVisualStyleBackColor = false;
-            this.SelectNextButton.Click += new System.EventHandler(this.SelectNextButton_Click);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -459,6 +416,49 @@
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(Assignment_5.Models.Product);
+            // 
+            // SelectionLabel
+            // 
+            this.SelectionLabel.AutoSize = true;
+            this.SelectionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectionLabel.Location = new System.Drawing.Point(-3, 415);
+            this.SelectionLabel.Name = "SelectionLabel";
+            this.SelectionLabel.Size = new System.Drawing.Size(206, 29);
+            this.SelectionLabel.TabIndex = 2;
+            this.SelectionLabel.Text = "Your Selection : ";
+            // 
+            // SelectTextBox
+            // 
+            this.SelectTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectTextBox.Location = new System.Drawing.Point(209, 409);
+            this.SelectTextBox.Name = "SelectTextBox";
+            this.SelectTextBox.ReadOnly = true;
+            this.SelectTextBox.Size = new System.Drawing.Size(456, 35);
+            this.SelectTextBox.TabIndex = 3;
+            // 
+            // SelectCancelButton
+            // 
+            this.SelectCancelButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SelectCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectCancelButton.Location = new System.Drawing.Point(677, 409);
+            this.SelectCancelButton.Name = "SelectCancelButton";
+            this.SelectCancelButton.Size = new System.Drawing.Size(101, 40);
+            this.SelectCancelButton.TabIndex = 4;
+            this.SelectCancelButton.Text = "Cancel";
+            this.SelectCancelButton.UseVisualStyleBackColor = false;
+            this.SelectCancelButton.Click += new System.EventHandler(this.selectCancelButton_Click);
+            // 
+            // SelectNextButton
+            // 
+            this.SelectNextButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SelectNextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectNextButton.Location = new System.Drawing.Point(811, 409);
+            this.SelectNextButton.Name = "SelectNextButton";
+            this.SelectNextButton.Size = new System.Drawing.Size(101, 40);
+            this.SelectNextButton.TabIndex = 5;
+            this.SelectNextButton.Text = "Next";
+            this.SelectNextButton.UseVisualStyleBackColor = false;
+            this.SelectNextButton.Click += new System.EventHandler(this.SelectNextButton_Click);
             // 
             // SelectForm
             // 

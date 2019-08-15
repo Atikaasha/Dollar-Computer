@@ -44,6 +44,48 @@ namespace Assignment_5.Views
         {
             OrderPrintForm.PrintAction = PrintAction.PrintToPreview;
             OrderPrintForm.Print();
-        } 
+        }
+
+        private void OrderForm_Activated(object sender, EventArgs e)
+        {
+            ConditionTextBox.Text = Program.productDetails.Condition;
+            PlatformTextBox.Text = Program.productDetails.Platform;
+            ManufacturerTextBox.Text = Program.productDetails.Manufacturer;
+            ModelTextBox.Text = Program.productDetails.Model;
+
+            //OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.LCDSize + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.RamSize + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.CPUBrand + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.CPUType + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.CPUNumber + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.CPUSpeed + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.HDDSize + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.GPUType + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.WebCam + "\r\n";
+            OrderFormTextBox.Text += "\r\n";
+            OrderFormTextBox.Text += Program.productDetails.OS + "\r\n";
+
+            PriceTextBox.Text = $"{Program.productDetails.Cost:C2}".ToString();
+            TaxTextBox.Text = $"{(Program.productDetails.Cost * 0.13):C2}".ToString();
+            TotalTextBox.Text = $"{(Program.productDetails.Cost + (Program.productDetails.Cost * 0.13)):C2}".ToString();
+        }
+
+        private void OrderFormFinishButon_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Thanks for your order\n\nYour order will be processed within 5 business days", "Complete!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

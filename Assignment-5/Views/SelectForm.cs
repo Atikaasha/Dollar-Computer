@@ -9,6 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/* Dollar Computer
+ * Description: COMP123 Assignment - 5(Computer purchase app)
+ * Author: Chowdhury Atika Parvin
+ * ID# 301007336
+ */
 
 namespace Assignment_5.Views
 {
@@ -61,7 +66,7 @@ namespace Assignment_5.Views
             string model = Program.productDetails.Model;
             double cost = Program.productDetails.Cost;
 
-                string outputString = manufacturer +", " + model + ", " + " $"     + cost;
+            string outputString = manufacturer +", " + model + ", " + " $"     + cost;
             SelectTextBox.Text = outputString;
             Program.productDetails.ProductionId = int.Parse(cells[(int)ProductDetails.ProductField.Product_ID].Value.ToString());
             Program.productDetails.Cost = double.Parse(cells[(int)ProductDetails.ProductField.Cost].Value.ToString());

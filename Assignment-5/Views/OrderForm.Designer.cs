@@ -31,6 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.OrderFormMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.PrintToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OrderFormGroupBox = new System.Windows.Forms.GroupBox();
@@ -48,7 +56,7 @@
             this.LCDLabel = new System.Windows.Forms.Label();
             this.ModelTextBox = new System.Windows.Forms.TextBox();
             this.ModelLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PlatformTextBox = new System.Windows.Forms.TextBox();
             this.PlatformLabel = new System.Windows.Forms.Label();
             this.ManufacturerTextBox = new System.Windows.Forms.TextBox();
             this.ManufacturerLabel = new System.Windows.Forms.Label();
@@ -61,26 +69,20 @@
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.TaxLabel = new System.Windows.Forms.Label();
             this.PriceLabel = new System.Windows.Forms.Label();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.OrderFormLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.OrderFormBackButton = new System.Windows.Forms.Button();
             this.OrderFormCancelButton = new System.Windows.Forms.Button();
             this.OrderFormFinishButon = new System.Windows.Forms.Button();
             this.OrderFormPictureBox = new System.Windows.Forms.PictureBox();
             this.OrderPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
-            this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.PrintToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.BackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.OrderFormLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.OrderFormMenuStrip.SuspendLayout();
             this.OrderFormGroupBox.SuspendLayout();
             this.InnerGroupBox.SuspendLayout();
             this.PriceGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderFormPictureBox)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // OrderFormMenuStrip
@@ -96,6 +98,70 @@
             this.OrderFormMenuStrip.TabIndex = 0;
             this.OrderFormMenuStrip.Text = "OderFormMenuStrip";
             // 
+            // fileToolStripMenuItem1
+            // 
+            this.fileToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator,
+            this.PrintToolStripMenuItem1,
+            this.printPreviewToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.exitToolStripMenuItem1});
+            this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
+            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(50, 29);
+            this.fileToolStripMenuItem1.Text = "&File";
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(194, 6);
+            // 
+            // PrintToolStripMenuItem1
+            // 
+            this.PrintToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("PrintToolStripMenuItem1.Image")));
+            this.PrintToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.PrintToolStripMenuItem1.Name = "PrintToolStripMenuItem1";
+            this.PrintToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.PrintToolStripMenuItem1.Size = new System.Drawing.Size(197, 30);
+            this.PrintToolStripMenuItem1.Text = "&Print";
+            this.PrintToolStripMenuItem1.Click += new System.EventHandler(this.PrintToolStripMenuItem_Click);
+            // 
+            // printPreviewToolStripMenuItem
+            // 
+            this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
+            this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
+            this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(194, 6);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(197, 30);
+            this.exitToolStripMenuItem1.Text = "E&xit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.OrderFormCancelButton_Click);
+            // 
+            // editToolStripMenuItem1
+            // 
+            this.editToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BackToolStripMenuItem});
+            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(54, 29);
+            this.editToolStripMenuItem1.Text = "&Edit";
+            // 
+            // BackToolStripMenuItem
+            // 
+            this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
+            this.BackToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.BackToolStripMenuItem.Size = new System.Drawing.Size(193, 30);
+            this.BackToolStripMenuItem.Text = "&Back";
+            this.BackToolStripMenuItem.Click += new System.EventHandler(this.OrderFormBackButton_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -109,7 +175,7 @@
             // 
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
             this.AboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(209, 30);
             this.AboutToolStripMenuItem.Text = "&About";
             this.AboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -118,7 +184,7 @@
             this.OrderFormGroupBox.Controls.Add(this.InnerGroupBox);
             this.OrderFormGroupBox.Controls.Add(this.ModelTextBox);
             this.OrderFormGroupBox.Controls.Add(this.ModelLabel);
-            this.OrderFormGroupBox.Controls.Add(this.textBox1);
+            this.OrderFormGroupBox.Controls.Add(this.PlatformTextBox);
             this.OrderFormGroupBox.Controls.Add(this.PlatformLabel);
             this.OrderFormGroupBox.Controls.Add(this.ManufacturerTextBox);
             this.OrderFormGroupBox.Controls.Add(this.ManufacturerLabel);
@@ -133,17 +199,8 @@
             // 
             // InnerGroupBox
             // 
+            this.InnerGroupBox.Controls.Add(this.tableLayoutPanel1);
             this.InnerGroupBox.Controls.Add(this.OrderFormTextBox);
-            this.InnerGroupBox.Controls.Add(this.OSLabel);
-            this.InnerGroupBox.Controls.Add(this.WebCamLabel);
-            this.InnerGroupBox.Controls.Add(this.GPUTypeLabel);
-            this.InnerGroupBox.Controls.Add(this.HDDLabel);
-            this.InnerGroupBox.Controls.Add(this.CPUSpeedLabel);
-            this.InnerGroupBox.Controls.Add(this.CPUNumberLabel);
-            this.InnerGroupBox.Controls.Add(this.CPUTypeLabel);
-            this.InnerGroupBox.Controls.Add(this.CPUBrandLabel);
-            this.InnerGroupBox.Controls.Add(this.MemoryLabel);
-            this.InnerGroupBox.Controls.Add(this.LCDLabel);
             this.InnerGroupBox.Location = new System.Drawing.Point(7, 101);
             this.InnerGroupBox.Name = "InnerGroupBox";
             this.InnerGroupBox.Size = new System.Drawing.Size(487, 329);
@@ -152,112 +209,112 @@
             // 
             // OrderFormTextBox
             // 
-            this.OrderFormTextBox.Location = new System.Drawing.Point(128, 22);
+            this.OrderFormTextBox.Location = new System.Drawing.Point(177, 22);
             this.OrderFormTextBox.Multiline = true;
             this.OrderFormTextBox.Name = "OrderFormTextBox";
             this.OrderFormTextBox.ReadOnly = true;
-            this.OrderFormTextBox.Size = new System.Drawing.Size(353, 301);
+            this.OrderFormTextBox.Size = new System.Drawing.Size(304, 279);
             this.OrderFormTextBox.TabIndex = 19;
             // 
             // OSLabel
             // 
-            this.OSLabel.AutoSize = true;
             this.OSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OSLabel.Location = new System.Drawing.Point(81, 306);
+            this.OSLabel.Location = new System.Drawing.Point(3, 234);
             this.OSLabel.Name = "OSLabel";
-            this.OSLabel.Size = new System.Drawing.Size(39, 20);
+            this.OSLabel.Size = new System.Drawing.Size(133, 30);
             this.OSLabel.TabIndex = 18;
             this.OSLabel.Text = "OS:";
+            this.OSLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // WebCamLabel
             // 
-            this.WebCamLabel.AutoSize = true;
             this.WebCamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WebCamLabel.Location = new System.Drawing.Point(29, 273);
+            this.WebCamLabel.Location = new System.Drawing.Point(3, 208);
             this.WebCamLabel.Name = "WebCamLabel";
-            this.WebCamLabel.Size = new System.Drawing.Size(91, 20);
+            this.WebCamLabel.Size = new System.Drawing.Size(133, 26);
             this.WebCamLabel.TabIndex = 17;
             this.WebCamLabel.Text = "Web Cam:";
+            this.WebCamLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // GPUTypeLabel
             // 
-            this.GPUTypeLabel.AutoSize = true;
             this.GPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GPUTypeLabel.Location = new System.Drawing.Point(25, 239);
+            this.GPUTypeLabel.Location = new System.Drawing.Point(3, 182);
             this.GPUTypeLabel.Name = "GPUTypeLabel";
-            this.GPUTypeLabel.Size = new System.Drawing.Size(95, 20);
+            this.GPUTypeLabel.Size = new System.Drawing.Size(133, 24);
             this.GPUTypeLabel.TabIndex = 16;
             this.GPUTypeLabel.Text = "GPU Type:";
+            this.GPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // HDDLabel
             // 
-            this.HDDLabel.AutoSize = true;
             this.HDDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HDDLabel.Location = new System.Drawing.Point(67, 206);
+            this.HDDLabel.Location = new System.Drawing.Point(3, 156);
             this.HDDLabel.Name = "HDDLabel";
-            this.HDDLabel.Size = new System.Drawing.Size(53, 20);
+            this.HDDLabel.Size = new System.Drawing.Size(133, 24);
             this.HDDLabel.TabIndex = 15;
             this.HDDLabel.Text = "HDD:";
+            this.HDDLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // CPUSpeedLabel
             // 
-            this.CPUSpeedLabel.AutoSize = true;
             this.CPUSpeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUSpeedLabel.Location = new System.Drawing.Point(13, 176);
+            this.CPUSpeedLabel.Location = new System.Drawing.Point(3, 130);
             this.CPUSpeedLabel.Name = "CPUSpeedLabel";
-            this.CPUSpeedLabel.Size = new System.Drawing.Size(107, 20);
+            this.CPUSpeedLabel.Size = new System.Drawing.Size(133, 25);
             this.CPUSpeedLabel.TabIndex = 14;
             this.CPUSpeedLabel.Text = "CPU Speed:";
+            this.CPUSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // CPUNumberLabel
             // 
-            this.CPUNumberLabel.AutoSize = true;
             this.CPUNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUNumberLabel.Location = new System.Drawing.Point(6, 141);
+            this.CPUNumberLabel.Location = new System.Drawing.Point(3, 104);
             this.CPUNumberLabel.Name = "CPUNumberLabel";
-            this.CPUNumberLabel.Size = new System.Drawing.Size(117, 20);
+            this.CPUNumberLabel.Size = new System.Drawing.Size(133, 24);
             this.CPUNumberLabel.TabIndex = 13;
             this.CPUNumberLabel.Text = "CPU Number:";
+            this.CPUNumberLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // CPUTypeLabel
             // 
-            this.CPUTypeLabel.AutoSize = true;
             this.CPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUTypeLabel.Location = new System.Drawing.Point(27, 113);
+            this.CPUTypeLabel.Location = new System.Drawing.Point(3, 78);
             this.CPUTypeLabel.Name = "CPUTypeLabel";
-            this.CPUTypeLabel.Size = new System.Drawing.Size(93, 20);
+            this.CPUTypeLabel.Size = new System.Drawing.Size(133, 24);
             this.CPUTypeLabel.TabIndex = 12;
             this.CPUTypeLabel.Text = "CPU Type:";
+            this.CPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // CPUBrandLabel
             // 
-            this.CPUBrandLabel.AutoSize = true;
             this.CPUBrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUBrandLabel.Location = new System.Drawing.Point(18, 82);
+            this.CPUBrandLabel.Location = new System.Drawing.Point(3, 52);
             this.CPUBrandLabel.Name = "CPUBrandLabel";
-            this.CPUBrandLabel.Size = new System.Drawing.Size(103, 20);
+            this.CPUBrandLabel.Size = new System.Drawing.Size(133, 24);
             this.CPUBrandLabel.TabIndex = 11;
             this.CPUBrandLabel.Text = "CPU Brand:";
+            this.CPUBrandLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // MemoryLabel
             // 
-            this.MemoryLabel.AutoSize = true;
             this.MemoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemoryLabel.Location = new System.Drawing.Point(45, 51);
+            this.MemoryLabel.Location = new System.Drawing.Point(3, 26);
             this.MemoryLabel.Name = "MemoryLabel";
-            this.MemoryLabel.Size = new System.Drawing.Size(76, 20);
+            this.MemoryLabel.Size = new System.Drawing.Size(133, 24);
             this.MemoryLabel.TabIndex = 10;
             this.MemoryLabel.Text = "Memory:";
+            this.MemoryLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // LCDLabel
             // 
-            this.LCDLabel.AutoSize = true;
             this.LCDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LCDLabel.Location = new System.Drawing.Point(31, 22);
+            this.LCDLabel.Location = new System.Drawing.Point(3, 0);
             this.LCDLabel.Name = "LCDLabel";
-            this.LCDLabel.Size = new System.Drawing.Size(89, 20);
+            this.LCDLabel.Size = new System.Drawing.Size(133, 24);
             this.LCDLabel.TabIndex = 9;
             this.LCDLabel.Text = "LCD Size:";
+            this.LCDLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ModelTextBox
             // 
@@ -278,14 +335,14 @@
             this.ModelLabel.TabIndex = 6;
             this.ModelLabel.Text = "Model:";
             // 
-            // textBox1
+            // PlatformTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(379, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(115, 30);
-            this.textBox1.TabIndex = 5;
+            this.PlatformTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlatformTextBox.Location = new System.Drawing.Point(379, 26);
+            this.PlatformTextBox.Name = "PlatformTextBox";
+            this.PlatformTextBox.ReadOnly = true;
+            this.PlatformTextBox.Size = new System.Drawing.Size(115, 30);
+            this.PlatformTextBox.TabIndex = 5;
             // 
             // PlatformLabel
             // 
@@ -408,27 +465,6 @@
             this.PriceLabel.TabIndex = 20;
             this.PriceLabel.Text = "Price:";
             // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(3, 22);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.OrderFormLineShape});
-            this.shapeContainer1.Size = new System.Drawing.Size(397, 153);
-            this.shapeContainer1.TabIndex = 25;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // OrderFormLineShape
-            // 
-            this.OrderFormLineShape.BorderColor = System.Drawing.Color.Maroon;
-            this.OrderFormLineShape.BorderWidth = 3;
-            this.OrderFormLineShape.Name = "OrderFormLineShape";
-            this.OrderFormLineShape.X1 = 24;
-            this.OrderFormLineShape.X2 = 384;
-            this.OrderFormLineShape.Y1 = 100;
-            this.OrderFormLineShape.Y2 = 100;
-            // 
             // OrderFormBackButton
             // 
             this.OrderFormBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -460,6 +496,7 @@
             this.OrderFormFinishButon.TabIndex = 6;
             this.OrderFormFinishButon.Text = "Finish";
             this.OrderFormFinishButon.UseVisualStyleBackColor = true;
+            this.OrderFormFinishButon.Click += new System.EventHandler(this.OrderFormFinishButon_Click);
             // 
             // OrderFormPictureBox
             // 
@@ -478,69 +515,57 @@
             this.OrderPrintForm.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("OrderPrintForm.PrinterSettings")));
             this.OrderPrintForm.PrintFileName = null;
             // 
-            // fileToolStripMenuItem1
+            // tableLayoutPanel1
             // 
-            this.fileToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator,
-            this.PrintToolStripMenuItem1,
-            this.printPreviewToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.exitToolStripMenuItem1});
-            this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
-            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(50, 29);
-            this.fileToolStripMenuItem1.Text = "&File";
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.LCDLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.MemoryLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.OSLabel, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.CPUBrandLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.WebCamLabel, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.CPUTypeLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.GPUTypeLabel, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.CPUNumberLabel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.HDDLabel, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.CPUSpeedLabel, 0, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 22);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 10;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(139, 264);
+            this.tableLayoutPanel1.TabIndex = 20;
             // 
-            // toolStripSeparator
+            // shapeContainer1
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(249, 6);
+            this.shapeContainer1.Location = new System.Drawing.Point(3, 22);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.OrderFormLineShape});
+            this.shapeContainer1.Size = new System.Drawing.Size(397, 153);
+            this.shapeContainer1.TabIndex = 25;
+            this.shapeContainer1.TabStop = false;
             // 
-            // PrintToolStripMenuItem1
+            // OrderFormLineShape
             // 
-            this.PrintToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("PrintToolStripMenuItem1.Image")));
-            this.PrintToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PrintToolStripMenuItem1.Name = "PrintToolStripMenuItem1";
-            this.PrintToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.PrintToolStripMenuItem1.Size = new System.Drawing.Size(252, 30);
-            this.PrintToolStripMenuItem1.Text = "&Print";
-            this.PrintToolStripMenuItem1.Click += new System.EventHandler(this.PrintToolStripMenuItem_Click);
-            // 
-            // printPreviewToolStripMenuItem
-            // 
-            this.printPreviewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printPreviewToolStripMenuItem.Image")));
-            this.printPreviewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.printPreviewToolStripMenuItem.Text = "Print Pre&view";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(249, 6);
-            // 
-            // exitToolStripMenuItem1
-            // 
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(252, 30);
-            this.exitToolStripMenuItem1.Text = "E&xit";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.OrderFormCancelButton_Click);
-            // 
-            // editToolStripMenuItem1
-            // 
-            this.editToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BackToolStripMenuItem});
-            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(54, 29);
-            this.editToolStripMenuItem1.Text = "&Edit";
-            // 
-            // BackToolStripMenuItem
-            // 
-            this.BackToolStripMenuItem.Name = "BackToolStripMenuItem";
-            this.BackToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.BackToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.BackToolStripMenuItem.Text = "&Back";
-            this.BackToolStripMenuItem.Click += new System.EventHandler(this.OrderFormBackButton_Click);
+            this.OrderFormLineShape.BorderColor = System.Drawing.Color.Green;
+            this.OrderFormLineShape.BorderWidth = 3;
+            this.OrderFormLineShape.Name = "OrderFormLineShape";
+            this.OrderFormLineShape.X1 = 9;
+            this.OrderFormLineShape.X2 = 377;
+            this.OrderFormLineShape.Y1 = 99;
+            this.OrderFormLineShape.Y2 = 100;
             // 
             // OrderForm
             // 
@@ -559,6 +584,7 @@
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Complete Your Order";
+            this.Activated += new System.EventHandler(this.OrderForm_Activated);
             this.OrderFormMenuStrip.ResumeLayout(false);
             this.OrderFormMenuStrip.PerformLayout();
             this.OrderFormGroupBox.ResumeLayout(false);
@@ -568,6 +594,7 @@
             this.PriceGroupBox.ResumeLayout(false);
             this.PriceGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderFormPictureBox)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,7 +612,7 @@
         private System.Windows.Forms.GroupBox InnerGroupBox;
         private System.Windows.Forms.TextBox ModelTextBox;
         private System.Windows.Forms.Label ModelLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PlatformTextBox;
         private System.Windows.Forms.Label PlatformLabel;
         private System.Windows.Forms.Label WebCamLabel;
         private System.Windows.Forms.Label GPUTypeLabel;
@@ -610,8 +637,6 @@
         private System.Windows.Forms.Button OrderFormCancelButton;
         private System.Windows.Forms.Button OrderFormFinishButon;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape OrderFormLineShape;
         private Microsoft.VisualBasic.PowerPacks.Printing.PrintForm OrderPrintForm;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
@@ -621,5 +646,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem BackToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape OrderFormLineShape;
     }
 }

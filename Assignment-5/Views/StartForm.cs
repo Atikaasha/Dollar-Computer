@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/* Dollar Computer
+ * Description: COMP123 Assignment - 5(Computer purchase app)
+ * Author: Chowdhury Atika Parvin
+ * ID# 301007336
+ */
 
 namespace Assignment_5.Views
 {
@@ -26,6 +31,11 @@ namespace Assignment_5.Views
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            Program.productInfoForm.OpenTextFile();
         }
     }
 }

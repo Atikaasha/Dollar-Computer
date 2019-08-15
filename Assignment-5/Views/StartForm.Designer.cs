@@ -81,6 +81,7 @@
             this.SaveButton.TabIndex = 5;
             this.SaveButton.Text = "Open a Saved Order";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // StartFormPictureBox
             // 
