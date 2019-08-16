@@ -43,17 +43,18 @@
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OrderFormGroupBox = new System.Windows.Forms.GroupBox();
             this.InnerGroupBox = new System.Windows.Forms.GroupBox();
-            this.OrderFormTextBox = new System.Windows.Forms.TextBox();
+            this.OrderFormTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.LCDLabel = new System.Windows.Forms.Label();
+            this.MemoryLabel = new System.Windows.Forms.Label();
             this.OSLabel = new System.Windows.Forms.Label();
+            this.CPUBrandLabel = new System.Windows.Forms.Label();
             this.WebCamLabel = new System.Windows.Forms.Label();
+            this.CPUTypeLabel = new System.Windows.Forms.Label();
             this.GPUTypeLabel = new System.Windows.Forms.Label();
+            this.CPUNumberLabel = new System.Windows.Forms.Label();
             this.HDDLabel = new System.Windows.Forms.Label();
             this.CPUSpeedLabel = new System.Windows.Forms.Label();
-            this.CPUNumberLabel = new System.Windows.Forms.Label();
-            this.CPUTypeLabel = new System.Windows.Forms.Label();
-            this.CPUBrandLabel = new System.Windows.Forms.Label();
-            this.MemoryLabel = new System.Windows.Forms.Label();
-            this.LCDLabel = new System.Windows.Forms.Label();
+            this.OrderFormTextBox = new System.Windows.Forms.TextBox();
             this.ModelTextBox = new System.Windows.Forms.TextBox();
             this.ModelLabel = new System.Windows.Forms.Label();
             this.PlatformTextBox = new System.Windows.Forms.TextBox();
@@ -69,20 +70,19 @@
             this.PriceTextBox = new System.Windows.Forms.TextBox();
             this.TaxLabel = new System.Windows.Forms.Label();
             this.PriceLabel = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.OrderFormLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.OrderFormBackButton = new System.Windows.Forms.Button();
             this.OrderFormCancelButton = new System.Windows.Forms.Button();
             this.OrderFormFinishButon = new System.Windows.Forms.Button();
             this.OrderFormPictureBox = new System.Windows.Forms.PictureBox();
             this.OrderPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.OrderFormLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.OrderFormMenuStrip.SuspendLayout();
             this.OrderFormGroupBox.SuspendLayout();
             this.InnerGroupBox.SuspendLayout();
+            this.OrderFormTableLayoutPanel.SuspendLayout();
             this.PriceGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderFormPictureBox)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // OrderFormMenuStrip
@@ -199,7 +199,7 @@
             // 
             // InnerGroupBox
             // 
-            this.InnerGroupBox.Controls.Add(this.tableLayoutPanel1);
+            this.InnerGroupBox.Controls.Add(this.OrderFormTableLayoutPanel);
             this.InnerGroupBox.Controls.Add(this.OrderFormTextBox);
             this.InnerGroupBox.Location = new System.Drawing.Point(7, 101);
             this.InnerGroupBox.Name = "InnerGroupBox";
@@ -207,14 +207,56 @@
             this.InnerGroupBox.TabIndex = 8;
             this.InnerGroupBox.TabStop = false;
             // 
-            // OrderFormTextBox
+            // OrderFormTableLayoutPanel
             // 
-            this.OrderFormTextBox.Location = new System.Drawing.Point(177, 22);
-            this.OrderFormTextBox.Multiline = true;
-            this.OrderFormTextBox.Name = "OrderFormTextBox";
-            this.OrderFormTextBox.ReadOnly = true;
-            this.OrderFormTextBox.Size = new System.Drawing.Size(304, 279);
-            this.OrderFormTextBox.TabIndex = 19;
+            this.OrderFormTableLayoutPanel.ColumnCount = 1;
+            this.OrderFormTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.OrderFormTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.OrderFormTableLayoutPanel.Controls.Add(this.LCDLabel, 0, 0);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.MemoryLabel, 0, 1);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.OSLabel, 0, 9);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.CPUBrandLabel, 0, 2);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.WebCamLabel, 0, 8);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.CPUTypeLabel, 0, 3);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.GPUTypeLabel, 0, 7);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.CPUNumberLabel, 0, 4);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.HDDLabel, 0, 6);
+            this.OrderFormTableLayoutPanel.Controls.Add(this.CPUSpeedLabel, 0, 5);
+            this.OrderFormTableLayoutPanel.Location = new System.Drawing.Point(32, 22);
+            this.OrderFormTableLayoutPanel.Name = "OrderFormTableLayoutPanel";
+            this.OrderFormTableLayoutPanel.RowCount = 10;
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.OrderFormTableLayoutPanel.Size = new System.Drawing.Size(139, 264);
+            this.OrderFormTableLayoutPanel.TabIndex = 20;
+            // 
+            // LCDLabel
+            // 
+            this.LCDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LCDLabel.Location = new System.Drawing.Point(3, 0);
+            this.LCDLabel.Name = "LCDLabel";
+            this.LCDLabel.Size = new System.Drawing.Size(133, 24);
+            this.LCDLabel.TabIndex = 9;
+            this.LCDLabel.Text = "LCD Size:";
+            this.LCDLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // MemoryLabel
+            // 
+            this.MemoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MemoryLabel.Location = new System.Drawing.Point(3, 26);
+            this.MemoryLabel.Name = "MemoryLabel";
+            this.MemoryLabel.Size = new System.Drawing.Size(133, 24);
+            this.MemoryLabel.TabIndex = 10;
+            this.MemoryLabel.Text = "Memory:";
+            this.MemoryLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // OSLabel
             // 
@@ -226,6 +268,16 @@
             this.OSLabel.Text = "OS:";
             this.OSLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // CPUBrandLabel
+            // 
+            this.CPUBrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPUBrandLabel.Location = new System.Drawing.Point(3, 52);
+            this.CPUBrandLabel.Name = "CPUBrandLabel";
+            this.CPUBrandLabel.Size = new System.Drawing.Size(133, 24);
+            this.CPUBrandLabel.TabIndex = 11;
+            this.CPUBrandLabel.Text = "CPU Brand:";
+            this.CPUBrandLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // WebCamLabel
             // 
             this.WebCamLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,6 +288,16 @@
             this.WebCamLabel.Text = "Web Cam:";
             this.WebCamLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // CPUTypeLabel
+            // 
+            this.CPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPUTypeLabel.Location = new System.Drawing.Point(3, 78);
+            this.CPUTypeLabel.Name = "CPUTypeLabel";
+            this.CPUTypeLabel.Size = new System.Drawing.Size(133, 24);
+            this.CPUTypeLabel.TabIndex = 12;
+            this.CPUTypeLabel.Text = "CPU Type:";
+            this.CPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // GPUTypeLabel
             // 
             this.GPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,6 +307,16 @@
             this.GPUTypeLabel.TabIndex = 16;
             this.GPUTypeLabel.Text = "GPU Type:";
             this.GPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // CPUNumberLabel
+            // 
+            this.CPUNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPUNumberLabel.Location = new System.Drawing.Point(3, 104);
+            this.CPUNumberLabel.Name = "CPUNumberLabel";
+            this.CPUNumberLabel.Size = new System.Drawing.Size(133, 24);
+            this.CPUNumberLabel.TabIndex = 13;
+            this.CPUNumberLabel.Text = "CPU Number:";
+            this.CPUNumberLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // HDDLabel
             // 
@@ -266,55 +338,14 @@
             this.CPUSpeedLabel.Text = "CPU Speed:";
             this.CPUSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // CPUNumberLabel
+            // OrderFormTextBox
             // 
-            this.CPUNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUNumberLabel.Location = new System.Drawing.Point(3, 104);
-            this.CPUNumberLabel.Name = "CPUNumberLabel";
-            this.CPUNumberLabel.Size = new System.Drawing.Size(133, 24);
-            this.CPUNumberLabel.TabIndex = 13;
-            this.CPUNumberLabel.Text = "CPU Number:";
-            this.CPUNumberLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // CPUTypeLabel
-            // 
-            this.CPUTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUTypeLabel.Location = new System.Drawing.Point(3, 78);
-            this.CPUTypeLabel.Name = "CPUTypeLabel";
-            this.CPUTypeLabel.Size = new System.Drawing.Size(133, 24);
-            this.CPUTypeLabel.TabIndex = 12;
-            this.CPUTypeLabel.Text = "CPU Type:";
-            this.CPUTypeLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // CPUBrandLabel
-            // 
-            this.CPUBrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPUBrandLabel.Location = new System.Drawing.Point(3, 52);
-            this.CPUBrandLabel.Name = "CPUBrandLabel";
-            this.CPUBrandLabel.Size = new System.Drawing.Size(133, 24);
-            this.CPUBrandLabel.TabIndex = 11;
-            this.CPUBrandLabel.Text = "CPU Brand:";
-            this.CPUBrandLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // MemoryLabel
-            // 
-            this.MemoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MemoryLabel.Location = new System.Drawing.Point(3, 26);
-            this.MemoryLabel.Name = "MemoryLabel";
-            this.MemoryLabel.Size = new System.Drawing.Size(133, 24);
-            this.MemoryLabel.TabIndex = 10;
-            this.MemoryLabel.Text = "Memory:";
-            this.MemoryLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // LCDLabel
-            // 
-            this.LCDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LCDLabel.Location = new System.Drawing.Point(3, 0);
-            this.LCDLabel.Name = "LCDLabel";
-            this.LCDLabel.Size = new System.Drawing.Size(133, 24);
-            this.LCDLabel.TabIndex = 9;
-            this.LCDLabel.Text = "LCD Size:";
-            this.LCDLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.OrderFormTextBox.Location = new System.Drawing.Point(177, 22);
+            this.OrderFormTextBox.Multiline = true;
+            this.OrderFormTextBox.Name = "OrderFormTextBox";
+            this.OrderFormTextBox.ReadOnly = true;
+            this.OrderFormTextBox.Size = new System.Drawing.Size(304, 279);
+            this.OrderFormTextBox.TabIndex = 19;
             // 
             // ModelTextBox
             // 
@@ -465,6 +496,27 @@
             this.PriceLabel.TabIndex = 20;
             this.PriceLabel.Text = "Price:";
             // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(3, 22);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.OrderFormLineShape});
+            this.shapeContainer1.Size = new System.Drawing.Size(397, 153);
+            this.shapeContainer1.TabIndex = 25;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // OrderFormLineShape
+            // 
+            this.OrderFormLineShape.BorderColor = System.Drawing.Color.Green;
+            this.OrderFormLineShape.BorderWidth = 3;
+            this.OrderFormLineShape.Name = "OrderFormLineShape";
+            this.OrderFormLineShape.X1 = 9;
+            this.OrderFormLineShape.X2 = 377;
+            this.OrderFormLineShape.Y1 = 99;
+            this.OrderFormLineShape.Y2 = 100;
+            // 
             // OrderFormBackButton
             // 
             this.OrderFormBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -515,58 +567,6 @@
             this.OrderPrintForm.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("OrderPrintForm.PrinterSettings")));
             this.OrderPrintForm.PrintFileName = null;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.LCDLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.MemoryLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.OSLabel, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.CPUBrandLabel, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.WebCamLabel, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.CPUTypeLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.GPUTypeLabel, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.CPUNumberLabel, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.HDDLabel, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.CPUSpeedLabel, 0, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 22);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(139, 264);
-            this.tableLayoutPanel1.TabIndex = 20;
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(3, 22);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.OrderFormLineShape});
-            this.shapeContainer1.Size = new System.Drawing.Size(397, 153);
-            this.shapeContainer1.TabIndex = 25;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // OrderFormLineShape
-            // 
-            this.OrderFormLineShape.BorderColor = System.Drawing.Color.Green;
-            this.OrderFormLineShape.BorderWidth = 3;
-            this.OrderFormLineShape.Name = "OrderFormLineShape";
-            this.OrderFormLineShape.X1 = 9;
-            this.OrderFormLineShape.X2 = 377;
-            this.OrderFormLineShape.Y1 = 99;
-            this.OrderFormLineShape.Y2 = 100;
-            // 
             // OrderForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -591,10 +591,10 @@
             this.OrderFormGroupBox.PerformLayout();
             this.InnerGroupBox.ResumeLayout(false);
             this.InnerGroupBox.PerformLayout();
+            this.OrderFormTableLayoutPanel.ResumeLayout(false);
             this.PriceGroupBox.ResumeLayout(false);
             this.PriceGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderFormPictureBox)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,7 +646,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem BackToolStripMenuItem;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel OrderFormTableLayoutPanel;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape OrderFormLineShape;
     }

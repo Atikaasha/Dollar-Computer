@@ -41,7 +41,7 @@
             this.ProductIDLabel = new System.Windows.Forms.Label();
             this.ProductIDTextBox = new System.Windows.Forms.TextBox();
             this.ConditionLabel = new System.Windows.Forms.Label();
-            this.ConditionTexBox = new System.Windows.Forms.TextBox();
+            this.ConditionTextBox = new System.Windows.Forms.TextBox();
             this.CostLabel = new System.Windows.Forms.Label();
             this.CostTextBox = new System.Windows.Forms.TextBox();
             this.ProductInfoGroupBox = new System.Windows.Forms.GroupBox();
@@ -198,15 +198,15 @@
             this.ConditionLabel.TabIndex = 3;
             this.ConditionLabel.Text = "Condition:";
             // 
-            // ConditionTexBox
+            // ConditionTextBox
             // 
-            this.ConditionTexBox.Enabled = false;
-            this.ConditionTexBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConditionTexBox.Location = new System.Drawing.Point(412, 62);
-            this.ConditionTexBox.Name = "ConditionTexBox";
-            this.ConditionTexBox.ReadOnly = true;
-            this.ConditionTexBox.Size = new System.Drawing.Size(134, 30);
-            this.ConditionTexBox.TabIndex = 4;
+            this.ConditionTextBox.Enabled = false;
+            this.ConditionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConditionTextBox.Location = new System.Drawing.Point(412, 62);
+            this.ConditionTextBox.Name = "ConditionTextBox";
+            this.ConditionTextBox.ReadOnly = true;
+            this.ConditionTextBox.Size = new System.Drawing.Size(134, 30);
+            this.ConditionTextBox.TabIndex = 4;
             // 
             // CostLabel
             // 
@@ -614,6 +614,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(955, 509);
+            this.ControlBox = false;
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelProductButton);
@@ -623,7 +624,7 @@
             this.Controls.Add(this.ProductInfoGroupBox);
             this.Controls.Add(this.CostTextBox);
             this.Controls.Add(this.CostLabel);
-            this.Controls.Add(this.ConditionTexBox);
+            this.Controls.Add(this.ConditionTextBox);
             this.Controls.Add(this.ConditionLabel);
             this.Controls.Add(this.ProductIDTextBox);
             this.Controls.Add(this.ProductIDLabel);
@@ -633,6 +634,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Information Form";
             this.Activated += new System.EventHandler(this.ProductInfoForm_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductInfoForm_FormClosing);
             this.ProductMenuStrip.ResumeLayout(false);
             this.ProductMenuStrip.PerformLayout();
             this.ProductInfoGroupBox.ResumeLayout(false);
@@ -654,7 +656,7 @@
         private System.Windows.Forms.Label ProductIDLabel;
         private System.Windows.Forms.TextBox ProductIDTextBox;
         private System.Windows.Forms.Label ConditionLabel;
-        private System.Windows.Forms.TextBox ConditionTexBox;
+        private System.Windows.Forms.TextBox ConditionTextBox;
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.TextBox CostTextBox;
         private System.Windows.Forms.GroupBox ProductInfoGroupBox;

@@ -7,6 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/* Dollar Computer
+ * Description: COMP123 Assignment - 5(Computer purchase app)
+ * Author: Chowdhury Atika Parvin
+ * Project completion Date: 16th August
+ * ID# 301007336
+ */
 
 namespace Assignment_5.Views
 {

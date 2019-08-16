@@ -10,6 +10,7 @@ using System.Windows.Forms;
 /* Dollar Computer
  * Description: COMP123 Assignment - 5(Computer purchase app)
  * Author: Chowdhury Atika Parvin
+ * Project completion Date: 16th August
  * ID# 301007336
  */
 
@@ -35,7 +36,8 @@ namespace Assignment_5.Views
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            Program.productInfoForm.OpenTextFile();
+            this.Hide();
+            Program.productInfoForm.Show();
         }
     }
 }

@@ -101,15 +101,5 @@ namespace Assignment_5.Views
             }
         }
         #endregion
-
-        private void AboutForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OkButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

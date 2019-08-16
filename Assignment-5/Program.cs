@@ -9,8 +9,8 @@ using System.Windows.Forms;
  * Description: COMP123 Assignment - 5(Computer purchase app)
  * Author: Chowdhury Atika Parvin
  * ID# 301007336
- * Version: 1.9 Project completed
- * Last modified: August 15, 2019
+ * Version: 2.0 Project completed
+ * Last modified: August 16, 2019
  */
 
 namespace Assignment_5

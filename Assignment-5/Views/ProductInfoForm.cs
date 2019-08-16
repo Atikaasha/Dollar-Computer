@@ -11,6 +11,7 @@ using System.Windows.Forms;
 /* Dollar Computer
  * Description: COMP123 Assignment - 5(Computer purchase app)
  * Author: Chowdhury Atika Parvin
+ * Project completion Date: 16th August
  * ID# 301007336
  */
 
@@ -48,7 +49,7 @@ namespace Assignment_5.Views
             {
                 ProductIDTextBox.Text = Program.productDetails.ProductionId.ToString();
                 CostTextBox.Text = Program.productDetails.Cost.ToString();
-                ConditionTexBox.Text = Program.productDetails.Condition;
+                ConditionTextBox.Text = Program.productDetails.Condition;
                 PlatformTextBox.Text = Program.productDetails.Platform;
                 OSTextBox.Text = Program.productDetails.OS;
                 ManufacturerTextBox.Text = Program.productDetails.Manufacturer;
@@ -73,7 +74,6 @@ namespace Assignment_5.Views
         public void OpenToolStripButton_Click(object sender, EventArgs e)
         {
             OpenTextFile();
-            //NextButton_Click(sender, e);
         }
 
         private void SaveBinaryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -319,6 +319,11 @@ namespace Assignment_5.Views
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void ProductInfoForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
